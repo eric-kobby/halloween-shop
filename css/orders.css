@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .search-option {
+  display: flex;
+  gap: 10px;
+}
+
+.input-control {
+  border-color: #333;
+  box-shadow: 0 0 10px var(--grey-color) inset;
+  background-color: transparent;
+}
+
+.search-option img {
+  height: 40px;
+  width: 40px;
+  transform: rotate(100deg);
+  object-fit: contain;
+}
+
+.pagination-section {
+  display: flex;
+  gap: 5px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.orders {
+  overflow: auto;
+  width: 100%;
+  display: block;
+  height: calc(100vh - 200px);
+}
+
+.orders {
+  border: 2px solid var(--grey-color);
+}
+

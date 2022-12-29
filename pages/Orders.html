@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/sidebar.css" />
+  <link rel="stylesheet" href="../css/orders.css" />
+  <title>Orders</title>
+</head>
+
+<body>
+  <div class="layout">
+    <div class="sidebar">
+      <div class="logo-holder">
+        <img class="logo" src="../assets/Freddys_Logo.svg" />
+      </div>
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="./Dashboard.html">Dashboard</a>
+        </li>
+        <li class="menu-item">
+          <a href="./Orders.html">Orders</a>
+        </li>
+        <li class="menu-item">
+          <a href="#" id="logout" Logout>Logout</a>
+        </li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="header">
+        <div class="title">
+          <h2 class="typography">Orders</h2>
+        </div>
+        <div class="search-option">
+          <img src="../assets/search-icon.svg" />
+          <input type="search" class="input-control search" />
+        </div>
+      </div>
+      <div class="orders outline-border">
+        <table>
+            <thead>  
+              <tr>
+                <th>Product Name</th>
+                <th>Date</th>
+                <th>Price</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+          <tbody id="table-rows"></tbody>
+        </table>
+      </div>
+      <div class="pagination-section">
+        <span>Page&nbsp;</span>
+        <i class="arrow arrow-left d-none"></i>
+        <span id="current-page">1</span>
+        <span>of</span>
+        <span id="total-pages">1</span>
+        <i class="arrow arrow-right"></i>
+      </div>
+    </div>
+  </div>
+  <script src="../scripts/constants.js"></script>
+  <script src="../helpers/formatHelper.js"></script>
+  <script src="../helpers/localStorageHelper.js"></script>
+  <script src="../services/Authservice.js"></script>
+  <script src="../services/Dataservice.js"></script>
+  <script src="../scripts/orders.js"></script>
+</body>
+
+</html>

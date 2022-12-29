@@ -1,0 +1,154 @@
+:root {
+  --dark-color: #333;
+  --grey-color: #a4a4a4;
+  --light-grey: #C2C2C2;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: arial, sans-serif;
+  color: var(--dark-color);
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+  padding: 8px;
+}
+
+.wrap {
+  background: #eee;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.input-control {
+  border: 2px solid var(--light-grey);
+  height: 35px;
+  padding: 12px 14px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  color: var(--dark-color);
+  border-radius: 4px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid var(--grey-color);
+  border-radius: 4px;
+  padding: 4px;
+  font-size: 18px;
+  height: 32px;
+  color: var(--dark-color);
+}
+
+.card .card-title {
+  font-size: 14px;
+}
+
+.btn {
+  height: 32px;
+  padding: 5px 14px;
+  width: 100%;
+  color: var(--dark-color);
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn.btn-outline {
+  border: 2px solid var(--light-grey);
+}
+
+.layout {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-areas: 'sidebar main';
+  grid-template-columns: 200px auto;
+  background: var(--light-grey);
+}
+
+.layout .main {
+  padding: 24px;
+}
+
+.typography {
+  font-size: larger;
+}
+
+table {
+  margin-top: 15px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  font-weight: 400;
+}
+
+td {
+  font-size: large;
+}
+
+td, th {
+  text-align: left;
+  padding: 12px;
+}
+
+.arrow {
+  display: block;
+  margin-top: .25em;
+  border-color: transparent;
+  border-top-color: #D00;
+	border-style: solid;
+	border-width: .5em .31em 0;
+	width: 0;
+	height: 0;
+	position: relative;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.arrow-right {
+ border-width: .31em 0 .31em .5em;
+ border-top-color: transparent;
+ border-left-color: #333;
+}
+
+.arrow-left {
+ border-width: .31em 0.5em .31em .0;
+ border-top-color: transparent;
+ border-right-color: #333;
+}
+
+.d-none {
+  display: none;
+}
+
+.text-danger {
+  color: #D00;
+}
+
+.text-success {
+  color: chartreuse;
+}
+
+.outline-border {
+  border: 2px solid var(--grey-color);
+  border-radius: 4px;
+}
+
+.mb {
+  margin-bottom: 10px;
+}

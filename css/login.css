@@ -1,0 +1,32 @@
+.wrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 100%;
+  border: 8px solid var(--grey-color);
+  max-width: 320px;
+  padding: 22px;
+  gap: 15px;
+}
+
+.login-box .header {
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.header .logo{
+  margin-top: -10px;
+}
+
+.login-box .actions{
+  padding-top: 20px;
+}

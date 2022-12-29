@@ -1,0 +1,38 @@
+div.main{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.order-summary {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+.card {
+  width: 22%;
+  height: 88px;
+  padding: 8px;
+}
+
+div.revenues {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.revenues .__header {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  width: 60%;
+}
+
+.revenues .chart-section{
+  width: 60%;
+}
+
+.chart-section #chart-canvas {
+  height: 310px !important;
+}

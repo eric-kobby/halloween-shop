@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/login.css" />
+  <title>Login</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <form id="login-form" method="post" action="#" class="login-box">
+      <div class="header">
+        <p>
+          Freddy's Artisanal Halloween Candy Shop
+        </p>
+        <img class="logo" src="./assets/Freddys_Logo.svg" alt="freddys logo" />
+      </div>
+      <input aria-label="username" id="username" type="text" class="input-control" placeholder="Username" required />
+      <input aria-label="password" id="password" type="password" class="input-control" placeholder="********"
+        required />
+      <div class="actions">
+        <button type="submit" id="login-button" class="btn btn-outline">Login</button>
+      </div>
+    </form>
+  </div>
+  <script src="./scripts/constants.js"></script>
+  <script src="./services/Authservice.js"></script>
+  <script src="./helpers/localStorageHelper.js"></script>
+  <script src="./scripts/login.js"></script>
+</body>
+
+</html>

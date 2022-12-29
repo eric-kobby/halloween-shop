@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/sidebar.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/switch.css">
+  <title>Dashboard</title>
+</head>
+<body>
+    <div class="layout">
+        <div class="sidebar">
+          <div class="logo-holder">
+            <img class="logo" src="../assets/Freddys_Logo.svg" />
+          </div>
+          <ul class="menu">
+            <li class="menu-item">
+              <a href="./Dashboard.html">Dashboard</a>
+            </li>
+            <li class="menu-item">
+              <a href="./Orders.html">Orders</a>
+            </li>
+            <li class="menu-item">
+             <a href="#" id="logout" Logout>Logout</a>
+            </li>
+          </ul>
+        </div>
+        <div class="main">
+          <div class="title">
+            <h2 class="typography">Dashboard</h2>
+          </div>
+          <div class="order-summary">
+              <div class="card">
+                <span class="card-title">Today</span>
+                <div id="todays-summary" class="card-body"></div> 
+              </div>
+              <div class="card">
+                <span class="card-title">Last Week</span>  
+                <div id="last-weeks-summary" class="card-body"></div> 
+              </div>
+              <div class="card">
+                <span class="card-title">Last Month</span>  
+                <div id="last-months-summary" class="card-body"></div> 
+              </div>
+          </div>
+          <!--Revenues Section-->
+          <div class="revenues">
+            <div class="__header">
+              <h2 class="typography">Revenue (last <span id="revenue-period">7 days</span>) </h2>
+              <div class="toggle">
+                <label class="switch">
+                  <input type="checkbox" id="toggle-switch" />
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+            <!--Revenue Chart-->
+            <div class="chart-section">
+              <canvas id="chart-canvas"></canvas>
+            </div>
+          </div>
+          <!--Best Sellers-->
+          <div class="bestsellers-section">
+            <h2 class="typography mb">Bestsellers</h2>
+            <div class="outline-border">
+              <table>
+                <tr>
+                  <th>Product Name</th>
+                  <th>Price</th>
+                  <th># Units Sold</th>
+                  <th>Revenue</th>
+                </tr>
+                <tbody id="table-rows"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../scripts/constants.js"></script>
+    <script src="../helpers/formatHelper.js"></script>
+    <script src="../helpers/localStorageHelper.js"></script>
+    <script src="../services/Authservice.js"></script>
+    <script src="../services/Dataservice.js"></script>
+    <script src="../scripts/dashboard.js"></script>
+</body>
+</html>
