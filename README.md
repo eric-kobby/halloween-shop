@@ -93,6 +93,17 @@ domains: `candy-corp.example` (full registrant), `acme-logistics.example`
 (redacted registrant, administrative contact published) and
 `shadow-sweets.example` (fully redacted, falls back to the network operator).
 
+### From the command line
+
+The same lookup runs under Node, which is the quickest way to check one address
+and is not subject to the browser's CORS limits:
+
+```sh
+node tools/lookup.js xeng@bitovi.com     # readable summary
+node tools/lookup.js --json bitovi.com   # the full result, including the raw record
+node tools/lookup.js --demo candy-corp.example
+```
+
 ### Limitations
 
 - **CORS.** gTLD registries are required to send `Access-Control-Allow-Origin: *`,
