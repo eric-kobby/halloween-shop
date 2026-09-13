@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/sidebar.css" />
+  <link rel="stylesheet" href="../css/switch.css" />
+  <link rel="stylesheet" href="../css/lookup.css" />
+  <title>Company Lookup</title>
+</head>
+
+<body>
+  <div class="layout">
+    <div class="sidebar">
+      <div class="logo-holder">
+        <img class="logo" src="../assets/Freddys_Logo.svg" />
+      </div>
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="./Dashboard.html">Dashboard</a>
+        </li>
+        <li class="menu-item">
+          <a href="./Orders.html">Orders</a>
+        </li>
+        <li class="menu-item">
+          <a href="./Lookup.html">Company Lookup</a>
+        </li>
+        <li class="menu-item">
+          <a href="#" id="logout" Logout>Logout</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <div class="header">
+        <div class="title">
+          <h2 class="typography">Company Lookup</h2>
+          <p class="muted">
+            Find the company behind a customer's email address or domain by reading the
+            registry's RDAP record.
+          </p>
+        </div>
+        <div class="demo-switch">
+          <label for="demo-toggle">Sample data</label>
+          <label class="switch">
+            <input type="checkbox" id="demo-toggle" aria-label="use bundled sample records" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <p id="demo-hint" class="hint d-none">
+        Sample data is on: lookups are answered from bundled, synthetic records instead of the live
+        registries. Try
+        <a href="#" class="sample" data-value="sam.hain@candy-corp.example">sam.hain@candy-corp.example</a>,
+        <a href="#" class="sample" data-value="acme-logistics.example">acme-logistics.example</a> or
+        <a href="#" class="sample" data-value="trick@shadow-sweets.example">trick@shadow-sweets.example</a>.
+      </p>
+
+      <form id="lookup-form" class="lookup-form">
+        <input aria-label="email address or domain" id="lookup-input" type="text" class="input-control"
+          placeholder="sam.hain@candy-corp.example" required />
+        <button type="submit" class="btn btn-outline">Look up</button>
+      </form>
+      <p id="lookup-status" class="muted"></p>
+
+      <div id="result"></div>
+
+      <details class="bulk outline-border">
+        <summary>Look up a list of customers</summary>
+        <form id="bulk-form">
+          <p class="muted">
+            Paste up to 50 email addresses or domains, separated by commas, spaces or new lines.
+            Queries run a few at a time - registries rate limit aggressively.
+          </p>
+          <textarea id="bulk-input" class="input-control bulk-input" rows="4"
+            placeholder="sam.hain@candy-corp.example, acme-logistics.example, trick@shadow-sweets.example"></textarea>
+          <div class="bulk-actions">
+            <button type="submit" class="btn btn-outline">Look up list</button>
+            <button type="button" id="bulk-export" class="btn btn-outline d-none">Download CSV</button>
+            <span id="bulk-progress" class="muted"></span>
+          </div>
+        </form>
+        <table>
+          <thead>
+            <tr>
+              <th>Input</th>
+              <th>Domain</th>
+              <th>Company</th>
+              <th>Confidence</th>
+              <th>Registrar</th>
+            </tr>
+          </thead>
+          <tbody id="bulk-rows"></tbody>
+        </table>
+      </details>
+    </div>
+  </div>
+
+  <script src="../scripts/constants.js"></script>
+  <script src="../helpers/formatHelper.js"></script>
+  <script src="../helpers/localStorageHelper.js"></script>
+  <script src="../helpers/domainHelper.js"></script>
+  <script src="../services/Authservice.js"></script>
+  <script src="../fixtures/rdap-samples.js"></script>
+  <script src="../services/Rdapservice.js"></script>
+  <script src="../scripts/lookup.js"></script>
+</body>
+
+</html>
