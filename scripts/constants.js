@@ -1,3 +1,5 @@
 const USER_TOKEN = "USER_TOKEN";
 
 const PAGE_SIZE = 50;
+
+const RDAP_DEMO_MODE = "RDAP_DEMO_MODE";
